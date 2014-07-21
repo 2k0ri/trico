@@ -39,83 +39,53 @@
 	<script src="scripts/libs/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
-    <div class="navbar" gumby-fixed="top" id="nav1">
+    <!--<div class="navbar" gumby-fixed="top" id="nav1">
 		<div class="row">
 			<ul class="eight columns">
-				<li>
-					<a href="#">Documentation</a>
-					<div class="dropdown">
-						<ul>
-							<li><a href="#">Item</a></li>
-							<li><a href="#">Item</a></li>
-							<li><a href="#">Item</a></li>
-							<li>
-								<a href="#">I HAVE STUFF NESTED UNDER ME</a>
-								<div class="dropdown">
-									<ul>
-										<li><a href="">nested</a></li>
-										<li><a href="">nested</a></li>
-										<li><a href="">nested</a></li>
-										<li><a href="">nested</a></li>
-										<li><a href="">nested</a></li>
-									</ul>
-								</div>
-							</li>
-							<li><a href="#">Item</a></li>
-							<li><a href="#">Item</a></li>
-							<li><a href="#">Item</a></li>
-							<li><a href="#">Item</a></li>
-							<li><a href="#">Item</a></li>
-							<li><a href="#">Item</a></li>
-							<li><a href="#">Item</a></li>
-						</ul>
-					</div>
-				</li>
-				<li><a href="#">Customize</a></li>
+				<li class="skiplink"><a href="#" gumby-goto="#member">Member</a></li>
+				<li class="skiplink"><a href="#">Customize</a></li>
 			</ul>
 		</div>
-	</div>
+	</div>-->
 
         
 	<div class="container">
-        <div class="bg-hero center-container">
+        <div class="bg-hero center-container parallax" gumby-parallax="0.2">
             <div class="row center-content">
                 <div class="title-logo">
                     <img src="images/title_info.png" alt="tricoten">
                 </div>
             </div>
         </div>
+            <div id="map" class="map"></div>
         <div class="bg-blue">
-            <div class="row"></div>
         </div>
 		<div class="row">
-			<div class="row">
-				<h1 class="lead">Images</h1>
+			<div class="row" id="member">
+				<h1 class="lead">Member</h1>
 				<div class="row">
 					<div class="twelve columns">
 						<div class="row">
-							<div class="five columns image circle">
-								<img src="images/img_silence_demo.jpg"/>
+							<div class="four columns">
+                                <div class="image circle">
+                                    <img src="images/kawazoe-photo.jpg"/>
+                                </div>
+                                <h5>川添潤子（カワゾエジュンコ）</h5>
+                                1992年東京都大田区生まれ。2014年立命館大学法学部卒業。2010年から部活動を中心に作品を出展。部から離れ、個人名での展覧会は今回の「toricoten」が初の試み。近年は、波をモチーフにした「生命力」を主な題材としている。画材はアクリル絵の具・ボールペン。
 							</div>
-							<div class="three columns image circle">
-								<img src="images/img_silence_demo.jpg"/>
+							<div class="four columns">
+                                <div class="image circle">
+                                    <img src="images/deguchi-photo.jpg"/>
+                                </div>
+                                <h5>出口萌（デグチモエギ）</h5>
+                                1990年茨城県に生まれる。2014年現在、立命館大学在学。画材は多岐に渡り、描写対象もさまざまである。見ている者と作品の関係に多く関心を寄せ、来場者による参加型のライブアートや、観覧者が一部になる作品など、実験的な作品の制作も見られる。
 							</div>
-							<div class="two columns image circle">
-								<img src="images/img_silence_demo.jpg"/>
-							</div>
-							<div class="one columns image circle">
-								<img src="images/img_silence_demo.jpg"/>
-							</div>
-						</div>
-						<div class="row">
-							<div class="four columns image rounded">
-								<img src="images/img_silence_demo.jpg"/>
-							</div>
-							<div class="four columns image photo">
-								<img src="images/img_silence_demo.jpg"/>
-							</div>
-							<div class="four columns image polaroid photo">
-								<img src="images/img_silence_demo.jpg"/>
+							<div class="four columns">
+                                <div class="image circle">
+                                    <img src="images/mori-photo.jpg"/>
+                                </div>
+                                <h5>森あやね（モリアヤネ）</h5>
+                                1992年、徳島市生まれ。幼い頃、あすなろ絵画教室に通う。2014年現在、立命館大学在学。美術研究部と劇団西一風に所属し、表現活動を行う。「ことば」に興味・関心があり、カラフルな画面に文字が躍っているのが特徴。「toricoten」の企画者。
 							</div>
 						</div>
 					</div>
@@ -206,6 +176,8 @@
 	<!-- Grab Google CDN's jQuery, fall back to local if offline -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="scripts/libs/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
 
 	<!--
 	Include gumby.js followed by UI modules.

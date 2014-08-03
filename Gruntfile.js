@@ -161,7 +161,7 @@ module.exports = function (grunt) {
                 options: {
                     // `name` and `out` is set by grunt-usemin
                     baseUrl: 'app/scripts',
-                    optimize: 'none',
+                    optimize: 'uglify2',
                     // TODO: Figure out how to make sourcemaps work with grunt-usemin
                     // https://github.com/yeoman/grunt-usemin/issues/30
                     //generateSourceMaps: true,
@@ -210,15 +210,15 @@ module.exports = function (grunt) {
         htmlmin: {
             dist: {
                 options: {
-                    //removeCommentsFromCDATA: true,
+                    removeCommentsFromCDATA: true,
                     //// https://github.com/yeoman/grunt-usemin/issues/44
                     ////collapseWhitespace: true,
-                    //collapseBooleanAttributes: true,
+                    collapseBooleanAttributes: true,
                     //removeAttributeQuotes: true,
-                    //removeRedundantAttributes: true,
-                    //useShortDoctype: true,
-                    //removeEmptyAttributes: true,
-                    //removeOptionalTags: true
+                    removeRedundantAttributes: true,
+                    useShortDoctype: true,
+                    removeEmptyAttributes: true,
+                    removeOptionalTags: true
                 },
                 files: [{
                     expand: true,

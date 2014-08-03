@@ -52,6 +52,9 @@ $(function() {
         width: '100%',
         height: 300,
         align: false,
+        items: {
+            start: 'random'
+        },
         scroll: {
             items: 1,
             duration: 5000,

@@ -1,14 +1,3 @@
-jQuery.extend(jQuery.easing, {
-    easeOutCirc: function(x, t, b, c, d) {
-        return c * Math.sqrt(1 - (t = t / d - 1) * t) + b;
-    }
-});
-$dur = 500;
-$durS = 150;
-$ease = 'easeOutCirc';
-dC = $.fn.carouFredSel.defaults;
-dC.scroll.items = 1;
-dC.scroll.easing = $ease;
 // Document ready
 $(function() {
     var map;
@@ -62,7 +51,13 @@ $(function() {
     $('#caroufredsel').carouFredSel({
         width: '100%',
         height: 300,
-        align: false
+        align: false,
+        scroll: {
+            items: 1,
+            duration: 5000,
+            timeoutDuration: 0,
+            easing: 'linear'
+        }
     });
 
 });

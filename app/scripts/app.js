@@ -1,22 +1,14 @@
-// Gumby is ready to go
-Gumby.ready(function() {
-	console.log('Gumby is ready to go...', Gumby.debug());
-
-	// placeholder polyfil
-	if(Gumby.isOldie || Gumby.$dom.find('html').hasClass('ie9')) {
-		$('input, textarea').placeholder();
-	}
+jQuery.extend(jQuery.easing, {
+    easeOutCirc: function(x, t, b, c, d) {
+        return c * Math.sqrt(1 - (t = t / d - 1) * t) + b;
+    }
 });
-
-// Oldie document loaded
-Gumby.oldie(function() {
-	console.log("This is an oldie browser...");
-});
-
-Gumby.touch(function() {
-	console.log("This is a touch enabled device...");
-});
-
+$dur = 500;
+$durS = 150;
+$ease = 'easeOutCirc';
+dC = $.fn.carouFredSel.defaults;
+dC.scroll.items = 1;
+dC.scroll.easing = $ease;
 // Document ready
 $(function() {
     var map;
@@ -63,5 +55,15 @@ $(function() {
     google.maps.event.addListener(marker, 'click', function() {
         infowindow.open(map,marker);
     });
+
+
+    //------------------- caroufredsel ----------------------
+
+    $('#caroufredsel').carouFredSel({
+        width: '100%',
+        height: 300,
+        align: false
+    });
+
 });
 

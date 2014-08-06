@@ -210,15 +210,15 @@ module.exports = function (grunt) {
         htmlmin: {
             dist: {
                 options: {
-                    removeCommentsFromCDATA: true,
+                    /*removeCommentsFromCDATA: true,
                     //// https://github.com/yeoman/grunt-usemin/issues/44
-                    ////collapseWhitespace: true,
+                    //collapseWhitespace: true,
                     collapseBooleanAttributes: true,
-                    //removeAttributeQuotes: true,
+                    removeAttributeQuotes: true,
                     removeRedundantAttributes: true,
                     useShortDoctype: true,
                     removeEmptyAttributes: true,
-                    removeOptionalTags: true
+                    removeOptionalTags: true*/
                 },
                 files: [{
                     expand: true,
@@ -240,7 +240,7 @@ module.exports = function (grunt) {
                         '.htaccess',
                         'images/{,*/}*.{webp,gif}',
                         'fonts/{,*/}*.*',
-                        'scripts/{,**/}*.*'
+                        'scripts/libs/modernizr-2.6.2.min.js'
                     ]
                 }]
             }
